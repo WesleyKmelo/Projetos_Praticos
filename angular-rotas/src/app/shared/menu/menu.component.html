@@ -1,0 +1,30 @@
+<!-- 
+    Utilização do Parametro routerlink para referenciar uma rota a ser utilizada.
+    Isso permite que uma SPA não restarte a aplicação a cada vez que o link for acessado.
+
+    O parametro 'routerLinkActive' permite acrescentar uma classe css para estilização. Serve
+    para configurar uma forma de avisar ao usuário em que page está no momento.
+
+    Já o parametro routerLinkActiveOptions diz que para que a aplicação do estilo do parametro 
+    anterior funcione, o path da rota deve ser exatamente igual, ao passado no path na seção
+    de app-routing-module. Isso permite que a estlização do componente aconteça apenas quando
+    ele estiver ativo
+ -->
+
+<div class="menu">
+    <ul>
+        <li><a 
+              [routerLink]="['']"
+              [routerLinkActive]="['activated']" 
+              [routerLinkActiveOptions]="{exact:true}"
+            >Home
+            </a></li>
+
+        <li><a 
+              [routerLink]="['portifolio']"
+              [routerLinkActive]="['activated']"
+              [routerLinkActiveOptions]="{exact:true}"
+            >Portifolio
+            </a></li>
+    </ul>
+</div>

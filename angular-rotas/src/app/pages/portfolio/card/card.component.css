@@ -1,0 +1,19 @@
+.container_main{
+    border: 3px solid red;
+    height: 90vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+}
+.container_main hr{
+    border: 3px solid blue;
+}
+.card{
+    position: relative;
+    border: 3px solid green;
+    left:-15rem;
+    bottom: -10rem;
+}
