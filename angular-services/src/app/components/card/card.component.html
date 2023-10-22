@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card_busca">
+        <input type="text" [(ngModel)]="pesqNome" value={{pesqNome}}>  <!--A diretiva NGFor permite que o componente tanto pode receber um valor como passar um valor tambem-->
+        <button type="button" (click)="getPokemon(pesqNome)">busca</button> <!--para a função ser chamada é preciso escrever a ação entre () seguido da função-->
+    </div>
+    <div class="card_title">
+        <h3>{{ pokemon.name }}</h3>
+    </div>
+    <div class="card_body">
+        <img [src]="pokemon.sprites.front_default" alt="Imagem de Pokemon">
+    </div>
+    <div class="card_stats">    <!--A diretiva NGFor serve pra fazer um loop qdo uma propriedade contiver um array. -->
+         <span class="card_stats_tipo" 
+          *ngFor="let tipo of pokemon.types" 
+         > 
+            {{tipo.type.name}} 
+        </span> 
+    </div>
+</div>
