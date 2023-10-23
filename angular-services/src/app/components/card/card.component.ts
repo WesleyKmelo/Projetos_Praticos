@@ -46,7 +46,7 @@ export class CardComponent implements OnInit {
             types:poke.types
           }
         },          
-        error: (err) => console.log(err)
+        error: (err) => console.log("nada foi encontrado")
       }
     )
   }
